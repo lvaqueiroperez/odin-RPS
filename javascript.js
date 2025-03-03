@@ -1,5 +1,8 @@
 console.log("hello world!");
 
+let computerScore=0;
+let userScore=0;
+
 function getComputerChoice() {
     const rpsNumber = Math.round(Math.random() * 2) + 1;
     let rps = "";
