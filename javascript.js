@@ -106,12 +106,9 @@ function playGame() {
     }
 
     //play 5 times
-    playRound(getComputerChoice(), getHumanChoice());
-    playRound(getComputerChoice(), getHumanChoice());
-    playRound(getComputerChoice(), getHumanChoice());
-    playRound(getComputerChoice(), getHumanChoice());
-    playRound(getComputerChoice(), getHumanChoice());
-
+    for (let i = 1; i <= 5; i++) {
+        playRound(getComputerChoice(), getHumanChoice());
+    }
 
     let winner = "";
 
