@@ -48,11 +48,13 @@ function getHumanChoice() {
 
 // pendiente: arreglar comportamiento cuando el user escribe algo mal, repetir esa llamada a la función hasta que lo que introduzca el user esté bien
 // también podría dejarlo así, pero hacer otra alternativa sirve para practicar
+// Además, al final de este proyecto se podría refactorizar para que quede bonito. Recuerda, una función por cada acción.
 function playGame() {
 
     let computerScore = 0;
     let userScore = 0;
 
+    // no me gusta que esto esté aquí declarado, pero lo ponía en los apuntes
     function playRound(computerSelection, humanSelection) {
 
         //console.log("HUMAN: " + humanSelection);
