@@ -1,24 +1,24 @@
 console.log("hello world!");
 
-let computerScore=0;
-let userScore=0;
+let computerScore = 0;
+let userScore = 0;
 
 function getComputerChoice() {
     const rpsNumber = Math.round(Math.random() * 2) + 1;
-    let rps = "";
+    let computerChoice = "";
 
     switch (rpsNumber) {
         case 1:
-            rps = "Rock"
+            computerChoice = "Rock"
             break;
         case 2:
-            rps = "Paper"
+            computerChoice = "Paper"
             break;
         case 3:
-            rps = "Scisors"
+            computerChoice = "Scisors"
             break;
         default:
-            rps = "An error has occurred."
+            computerChoice = "An error has occurred."
 
     }
 
