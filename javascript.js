@@ -24,7 +24,11 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let humanChoice = prompt("Write and submit:\nRock, Paper, Scissors", "").toLowerCase();
+    let humanChoice = prompt("Write and submit:\nRock, Paper, Scissors");
+
+    if (humanChoice) {
+        humanChoice = humanChoice.toLowerCase();
+    }
 
     switch (humanChoice) {
         case "rock":
@@ -42,6 +46,7 @@ function getHumanChoice() {
 
 }
 
+// pendiente: arreglar comportamiento cuando el user escribe algo mal, repetir esa llamada a la función hasta que lo que introduzca el user esté bien
 function playGame() {
 
     let computerScore = 0;
@@ -53,7 +58,8 @@ function playGame() {
         //console.log("COMPUTER: " + computerSelection);
 
         if (humanSelection === "Invalid value") {
-            console.log("An invalid value has been entered. Bye.");
+            console.log("An invalid value has been entered, you lose!");
+            computerScore++;
         } else if (computerSelection === humanSelection) {
             console.log("Computer: " + computerSelection);
             console.log("You: " + humanSelection);
