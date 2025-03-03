@@ -15,14 +15,14 @@ function getComputerChoice() {
             computerChoice = "paper"
             break;
         case 3:
-            computerChoice = "scisors"
+            computerChoice = "scissors"
             break;
         default:
             computerChoice = "An error has occurred."
 
     }
 
-    return rps;
+    return computerChoice;
 
 }
 
@@ -38,12 +38,63 @@ function getHumanChoice() {
             return humanChoice;
         default:
             alert("Invalid Rock, Paper, Scissors value!\nPlease, write exactly Rock, Paper or Scissors.");
-            return "Invalid value";
+            humanChoice = "Invalid value";
+            return humanChoice;
     }
 
 
 }
 
-function playRound(computerSelection, HumanSelection){
+function playRound(computerSelection, humanSelection) {
+
+    console.log("HUMAN: " + humanSelection);
+    console.log("COMPUTER: " + computerSelection);
+
+    if (humanSelection === "Invalid value") {
+        console.log("An invalid value has been entered. Bye.");
+    } else if (computerSelection === humanSelection) {
+        console.log("Computer: " + computerSelection);
+        console.log("You: " + humanSelection);
+        console.log("It's a tie!");
+    } else if (computerSelection === "scissors" && humanSelection === "paper") {
+        console.log("Computer: " + computerSelection);
+        console.log("You: " + humanSelection);
+        console.log("You lose!");
+        computerScore++;
+    }
+    else if (computerSelection === "scissors" && humanSelection === "rock") {
+        console.log("Computer: " + computerSelection);
+        console.log("You: " + humanSelection);
+        console.log("You win!");
+        userScore++;
+    }
+    else if (computerSelection === "paper" && humanSelection === "rock") {
+        console.log("Computer: " + computerSelection);
+        console.log("You: " + humanSelection);
+        console.log("You lose!");
+        computerScore++;
+    }
+    else if (computerSelection === "paper" && humanSelection === "scissors") {
+        console.log("Computer: " + computerSelection);
+        console.log("You: " + humanSelection);
+        console.log("You win!");
+        userScore++;
+    }
+    else if (computerSelection === "rock" && humanSelection === "paper") {
+        console.log("Computer: " + computerSelection);
+        console.log("You: " + humanSelection);
+        console.log("You win!");
+        userScore++;
+    }
+    else if (computerSelection === "rock" && humanSelection === "scissors") {
+        console.log("Computer: " + computerSelection);
+        console.log("You: " + humanSelection);
+        console.log("You lose!");
+        computerScore++;
+    }
+
+    console.log("Scores:\nUser: " + userScore + "\nComputer: " + computerScore);
 
 }
+
+playRound(getComputerChoice(), getHumanChoice());
