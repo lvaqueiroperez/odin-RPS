@@ -47,6 +47,7 @@ function getHumanChoice() {
 }
 
 // pendiente: arreglar comportamiento cuando el user escribe algo mal, repetir esa llamada a la función hasta que lo que introduzca el user esté bien
+// también podría dejarlo así, pero hacer otra alternativa sirve para practicar
 function playGame() {
 
     let computerScore = 0;
