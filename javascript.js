@@ -9,13 +9,13 @@ function getComputerChoice() {
 
     switch (rpsNumber) {
         case 1:
-            computerChoice = "Rock"
+            computerChoice = "rock"
             break;
         case 2:
-            computerChoice = "Paper"
+            computerChoice = "paper"
             break;
         case 3:
-            computerChoice = "Scisors"
+            computerChoice = "scisors"
             break;
         default:
             computerChoice = "An error has occurred."
@@ -41,5 +41,9 @@ function getHumanChoice() {
             return "Invalid value";
     }
 
+
+}
+
+function playRound(computerSelection, HumanSelection){
 
 }
