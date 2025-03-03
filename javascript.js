@@ -1,4 +1,4 @@
-console.log("hello world!");
+console.log(`Enter "playGame()" to start!`);
 
 function getComputerChoice() {
     const rpsNumber = Math.round(Math.random() * 2) + 1;
