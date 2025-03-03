@@ -22,3 +22,21 @@ function getComputerChoice() {
     return rps;
 
 }
+
+function getHumanChoice() {
+    let humanChoice = prompt("Write and submit:\nRock, Paper, Scissors", "").toLowerCase();
+
+    switch (humanChoice) {
+        case "rock":
+            return humanChoice;
+        case "paper":
+            return humanChoice;
+        case "scissors":
+            return humanChoice;
+        default:
+            alert("Invalid Rock, Paper, Scissors value!\nPlease, write exactly Rock, Paper or Scissors.");
+            return "Invalid value";
+    }
+
+
+}
