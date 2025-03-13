@@ -4,16 +4,14 @@ let computerScore = 0;
 let userScore = 0;
 
 const btnDiv = document.querySelector("#btnContainer");
+const resultDiv = document.querySelector("#resultContainer");
 
 btnDiv.addEventListener("click", (e) => {
     const btnId = e.target.id;
-    console.log(btnId);
 
     if (btnId === "rock" || btnId === "paper" || btnId === "scissors") {
         // quiero el resultado/return de la función, por eso pongo los (), no es una callback !!!
         playRound(getComputerChoice(), btnId);
-    } else {
-        console.log("No button was clicked.");
     }
 
 });
@@ -69,54 +67,46 @@ function getHumanChoice() {
 
 function playRound(computerSelection, humanSelection) {
 
-    //console.log("HUMAN: " + humanSelection);
-    //console.log("COMPUTER: " + computerSelection);
-    console.log("**************************************************");
     if (!humanSelection) {
-        console.log("An invalid value has been entered, you lose!");
+        resultDiv.textContent = "An invalid value has been entered, you lose!";
         computerScore++;
+
     } else if (computerSelection === humanSelection) {
-        console.log("Computer: " + computerSelection);
-        console.log("You: " + humanSelection);
-        console.log("It's a tie!");
+        resultDiv.textContent =
+            `Computer: ${computerSelection}\nYou: ${humanSelection}\nIT'S A TIE!`;
+
     } else if (computerSelection === "scissors" && humanSelection === "paper") {
-        console.log("Computer: " + computerSelection);
-        console.log("You: " + humanSelection);
-        console.log("You lose!");
+        resultDiv.textContent =
+            `Computer: ${computerSelection}\nYou: ${humanSelection}\nYou lose!`;
         computerScore++;
     }
     else if (computerSelection === "scissors" && humanSelection === "rock") {
-        console.log("Computer: " + computerSelection);
-        console.log("You: " + humanSelection);
-        console.log("You win!");
+        resultDiv.textContent =
+            `Computer: ${computerSelection}\nYou: ${humanSelection}\nYou win!`;
         userScore++;
     }
     else if (computerSelection === "paper" && humanSelection === "rock") {
-        console.log("Computer: " + computerSelection);
-        console.log("You: " + humanSelection);
-        console.log("You lose!");
+        resultDiv.textContent =
+            `Computer: ${computerSelection}\nYou: ${humanSelection}\nYou lose!`;
         computerScore++;
     }
     else if (computerSelection === "paper" && humanSelection === "scissors") {
-        console.log("Computer: " + computerSelection);
-        console.log("You: " + humanSelection);
-        console.log("You win!");
+        resultDiv.textContent =
+            `Computer: ${computerSelection}\nYou: ${humanSelection}\nYou win!`;
         userScore++;
     }
     else if (computerSelection === "rock" && humanSelection === "paper") {
-        console.log("Computer: " + computerSelection);
-        console.log("You: " + humanSelection);
-        console.log("You win!");
+        resultDiv.textContent =
+            `Computer: ${computerSelection}\nYou: ${humanSelection}\nYou win!`;
         userScore++;
     }
     else if (computerSelection === "rock" && humanSelection === "scissors") {
-        console.log("Computer: " + computerSelection);
-        console.log("You: " + humanSelection);
-        console.log("You lose!");
+        resultDiv.textContent =
+            `Computer: ${computerSelection}\nYou: ${humanSelection}\nYou lose!`;
         computerScore++;
     }
 
-    console.log("Scores:\nUser: " + userScore + "\nComputer: " + computerScore);
+    resultDiv.textContent += "Scores:\nUser: " + userScore + "\nComputer: " + computerScore;
 
 }
 
