@@ -65,6 +65,26 @@ function getHumanChoice() {
 }
 */
 
+function getResultText(winner, computerSelection, humanSelection) {
+    switch (winner) {
+        case "user":
+            return `Computer: ${computerSelection}\nYou: ${humanSelection}\nYou win!`;
+
+
+        case "computer":
+            return `Computer: ${computerSelection}\nYou: ${humanSelection}\nYou lose!`;
+
+
+        case "tie":
+            return `Computer: ${computerSelection}\nYou: ${humanSelection}\nIT'S A TIE!`;
+
+
+        default:
+            return "ERROR";
+
+    }
+}
+
 function playRound(computerSelection, humanSelection) {
 
     if (!humanSelection) {
@@ -72,41 +92,35 @@ function playRound(computerSelection, humanSelection) {
         computerScore++;
 
     } else if (computerSelection === humanSelection) {
-        resultDiv.textContent =
-            `Computer: ${computerSelection}\nYou: ${humanSelection}\nIT'S A TIE!`;
+        resultDiv.textContent = getResultText("tie", computerSelection, humanSelection);
 
     } else if (computerSelection === "scissors" && humanSelection === "paper") {
-        resultDiv.textContent =
-            `Computer: ${computerSelection}\nYou: ${humanSelection}\nYou lose!`;
+        resultDiv.textContent = getResultText("computer", computerSelection, humanSelection);
         computerScore++;
     }
     else if (computerSelection === "scissors" && humanSelection === "rock") {
-        resultDiv.textContent =
-            `Computer: ${computerSelection}\nYou: ${humanSelection}\nYou win!`;
+        resultDiv.textContent = getResultText("user", computerSelection, humanSelection);
+
         userScore++;
     }
     else if (computerSelection === "paper" && humanSelection === "rock") {
-        resultDiv.textContent =
-            `Computer: ${computerSelection}\nYou: ${humanSelection}\nYou lose!`;
+        resultDiv.textContent = getResultText("computer", computerSelection, humanSelection);
         computerScore++;
     }
     else if (computerSelection === "paper" && humanSelection === "scissors") {
-        resultDiv.textContent =
-            `Computer: ${computerSelection}\nYou: ${humanSelection}\nYou win!`;
+        resultDiv.textContent = getResultText("user", computerSelection, humanSelection);
         userScore++;
     }
     else if (computerSelection === "rock" && humanSelection === "paper") {
-        resultDiv.textContent =
-            `Computer: ${computerSelection}\nYou: ${humanSelection}\nYou win!`;
+        resultDiv.textContent = getResultText("user", computerSelection, humanSelection);
         userScore++;
     }
     else if (computerSelection === "rock" && humanSelection === "scissors") {
-        resultDiv.textContent =
-            `Computer: ${computerSelection}\nYou: ${humanSelection}\nYou lose!`;
+        resultDiv.textContent = getResultText("computer", computerSelection, humanSelection);
         computerScore++;
     }
 
-    resultDiv.textContent += "Scores:\nUser: " + userScore + "\nComputer: " + computerScore;
+    resultDiv.textContent += "\nScores:\nUser: " + userScore + "\nComputer: " + computerScore;
 
 }
 
