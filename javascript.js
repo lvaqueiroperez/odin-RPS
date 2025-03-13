@@ -1,5 +1,20 @@
 console.log(`Enter "playGame()" to start!`);
 
+const btnDiv = document.querySelector("#btnContainer");
+
+btnDiv.addEventListener("click", (e) => {
+    const btnId = e.target.id;
+    console.log(btnId);
+
+    if(btnId === "rock" || btnId === "paper" || btnId === "scissors") {
+        playRound(getComputerChoice, btnId);
+    } else {
+        console.log("No button was clicked.");
+    }
+
+});
+
+
 function getComputerChoice() {
     const rpsNumber = Math.round(Math.random() * 2) + 1;
     let computerChoice = "";
