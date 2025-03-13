@@ -16,7 +16,6 @@ btnDiv.addEventListener("click", (e) => {
 
 });
 
-
 function getComputerChoice() {
     const rpsNumber = Math.round(Math.random() * 2) + 1;
     let computerChoice = "";
@@ -39,31 +38,6 @@ function getComputerChoice() {
     return computerChoice;
 
 }
-
-/*
-function getHumanChoice() {
-    let humanChoice = prompt("Write and submit:\nRock, Paper, Scissors");
-
-    if (humanChoice) {
-        humanChoice = humanChoice.toLowerCase();
-    }
-
-    switch (humanChoice) {
-        case "rock":
-            return humanChoice;
-        case "paper":
-            return humanChoice;
-        case "scissors":
-            return humanChoice;
-        default:
-            alert("Invalid Rock, Paper, Scissors value!\nPlease, write exactly Rock, Paper or Scissors.");
-            humanChoice = "Invalid value";
-            return humanChoice;
-    }
-
-
-}
-*/
 
 function getResultText(winner, computerSelection, humanSelection) {
     switch (winner) {
