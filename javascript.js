@@ -4,12 +4,20 @@ let computerScore = 0;
 let userScore = 0;
 
 const btnDiv = document.querySelector("#btnContainer");
-const resultDiv = document.querySelector("#resultContainer");
+const computerResult = document.querySelector("#computerResult");
+const userResult = document.querySelector("#userResult");
+const winnerText = document.querySelector("#winnerText");
+const computerGlobalResult = document.querySelector("#computerGlobalResult");
+const userGlobalResult = document.querySelector("#userGlobalResult");
+const finalWinnerText = document.querySelector("#finalWinnerText");
 
 btnDiv.addEventListener("click", (e) => {
     const btnId = e.target.id;
 
     if (btnId === "rock" || btnId === "paper" || btnId === "scissors") {
+        computerResult.textContent = "Computer: ";
+        userResult.textContent = "User: ";
+        winnerText.textContent = "WINNER: ";
         // quiero el resultado/return de la función, por eso pongo los (), no es una callback !!!
         playRound(getComputerChoice(), btnId);
     }
@@ -39,62 +47,67 @@ function getComputerChoice() {
 
 }
 
-function getResultText(winner, computerSelection, humanSelection) {
-    switch (winner) {
-        case "user":
-            return `Computer: ${computerSelection}\nYou: ${humanSelection}\nYou win!`;
-
-
-        case "computer":
-            return `Computer: ${computerSelection}\nYou: ${humanSelection}\nYou lose!`;
-
-
-        case "tie":
-            return `Computer: ${computerSelection}\nYou: ${humanSelection}\nIT'S A TIE!`;
-
-
-        default:
-            return "ERROR";
-
-    }
-}
-
 function playRound(computerSelection, humanSelection) {
 
-    if (!humanSelection) {
-        resultDiv.textContent = "An invalid value has been entered, you lose!";
-        computerScore++;
+    if (computerSelection === humanSelection) {
 
-    } else if (computerSelection === humanSelection) {
-        resultDiv.textContent = getResultText("tie", computerSelection, humanSelection);
+        computerResult.textContent += computerSelection;
+        userResult.textContent += humanSelection;
+        winnerText.textContent += "IT'S A TIE!";
+
 
     } else if (computerSelection === "scissors" && humanSelection === "paper") {
-        resultDiv.textContent = getResultText("computer", computerSelection, humanSelection);
+
+        computerResult.textContent += computerSelection;
+        userResult.textContent += humanSelection;
+        winnerText.textContent += "YOU LOSE!";
+
         computerScore++;
     }
     else if (computerSelection === "scissors" && humanSelection === "rock") {
-        resultDiv.textContent = getResultText("user", computerSelection, humanSelection);
+
+        computerResult.textContent += computerSelection;
+        userResult.textContent += humanSelection;
+        winnerText.textContent += "YOU WIN!";
 
         userScore++;
     }
     else if (computerSelection === "paper" && humanSelection === "rock") {
-        resultDiv.textContent = getResultText("computer", computerSelection, humanSelection);
+
+        computerResult.textContent += computerSelection;
+        userResult.textContent += humanSelection;
+        winnerText.textContent += "YOU LOSE!";
+
         computerScore++;
     }
     else if (computerSelection === "paper" && humanSelection === "scissors") {
-        resultDiv.textContent = getResultText("user", computerSelection, humanSelection);
+
+        computerResult.textContent += computerSelection;
+        userResult.textContent += humanSelection;
+        winnerText.textContent += "YOU WIN!";
+
         userScore++;
     }
     else if (computerSelection === "rock" && humanSelection === "paper") {
-        resultDiv.textContent = getResultText("user", computerSelection, humanSelection);
+
+        computerResult.textContent += computerSelection;
+        userResult.textContent += humanSelection;
+        winnerText.textContent += "YOU WIN!";
+
         userScore++;
     }
     else if (computerSelection === "rock" && humanSelection === "scissors") {
-        resultDiv.textContent = getResultText("computer", computerSelection, humanSelection);
+
+        computerResult.textContent += computerSelection;
+        userResult.textContent += humanSelection;
+        winnerText.textContent += "YOU LOSE!";
+
         computerScore++;
     }
 
-    resultDiv.textContent += "\nScores:\nUser: " + userScore + "\nComputer: " + computerScore;
+    computerGlobalResult.textContent = "COMPUTER: " + computerScore;
+    userGlobalResult.textContent = "USER: " + userScore;
+    //resultDiv.textContent += "\nScores:\nUser: " + userScore + "\nComputer: " + computerScore;
 
 }
 
