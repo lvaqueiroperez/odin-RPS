@@ -107,6 +107,16 @@ function playRound(computerSelection, humanSelection) {
 
     computerGlobalResult.textContent = "COMPUTER: " + computerScore;
     userGlobalResult.textContent = "USER: " + userScore;
+
+    if (userScore === 5) {
+        // enseña el alert antes de mostrar un 5 en la puntuación, buscar manera de pausar un poco el código antes
+        alert("YAY! YOU WIN!");
+        resetGame();
+
+    } else if (computerScore === 5) {
+        alert("OH NO! YOU HAVE LOST!");
+        resetGame();
+    }
 }
 
 function resetGame() {
