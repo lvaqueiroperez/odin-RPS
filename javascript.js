@@ -128,23 +128,3 @@ function resetGame() {
     computerGlobalResult.textContent = "";
     userGlobalResult.textContent = "";
 }
-
-// pendiente: arreglar comportamiento cuando el user escribe algo mal, repetir esa llamada a la función hasta que lo que introduzca el user esté bien
-// también podría dejarlo así, pero hacer otra alternativa sirve para practicar
-// Además, al final de este proyecto se podría refactorizar para que quede bonito. Recuerda, una función por cada acción.
-function playGame() {
-
-    let winner = "";
-
-    if (userScore === computerScore) {
-        winner = "OMG! A TIE!";
-    } else if (userScore > computerScore) {
-        winner = "YOU WIN!";
-    } else {
-        winner = "YOU LOSE! :("
-    }
-
-    console.log("FINAL RESULTS:\nCOMPUTER: " + computerScore + "\nUSER: " + userScore);
-    console.log(winner);
-
-}
