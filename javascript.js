@@ -107,8 +107,16 @@ function playRound(computerSelection, humanSelection) {
 
     computerGlobalResult.textContent = "COMPUTER: " + computerScore;
     userGlobalResult.textContent = "USER: " + userScore;
-    //resultDiv.textContent += "\nScores:\nUser: " + userScore + "\nComputer: " + computerScore;
+}
 
+function resetGame() {
+    computerScore = 0;
+    userScore = 0;
+    computerResult.textContent = "Computer: ";
+    userResult.textContent = "User: ";
+    winnerText.textContent = "WINNER: ";
+    computerGlobalResult.textContent = "";
+    userGlobalResult.textContent = "";
 }
 
 // pendiente: arreglar comportamiento cuando el user escribe algo mal, repetir esa llamada a la función hasta que lo que introduzca el user esté bien
