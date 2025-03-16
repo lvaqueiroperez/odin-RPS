@@ -7,7 +7,6 @@ const userResult = document.querySelector("#userResult");
 const winnerText = document.querySelector("#winnerText");
 const computerGlobalResult = document.querySelector("#computerGlobalResult");
 const userGlobalResult = document.querySelector("#userGlobalResult");
-const finalWinnerText = document.querySelector("#finalWinnerText");
 
 btnDiv.addEventListener("click", (e) => {
     const btnId = e.target.id;
