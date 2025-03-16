@@ -1,5 +1,3 @@
-console.log(`Enter "playGame()" to start!`);
-
 let computerScore = 0;
 let userScore = 0;
 
