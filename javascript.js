@@ -13,10 +13,10 @@ btnDiv.addEventListener("click", (e) => {
 
     if (btnId === "rock" || btnId === "paper" || btnId === "scissors") {
 
-        e.target.disabled = true;
+        btnDiv.querySelectorAll("button").forEach((item) => item.disabled = true);
 
         setTimeout(() => {
-            e.target.disabled = false;
+            btnDiv.querySelectorAll("button").forEach((item) => item.disabled = false);
         }, 500);
 
         computerResult.textContent = "Computer: ";
