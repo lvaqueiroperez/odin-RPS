@@ -29,9 +29,15 @@ body {
     border-bottom-color: red;
     border-left-color: blue;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#btnContainer {}
+#btnContainer {
+    display: flex;
+}
 
 #rock {
     background-image: url("./images/rock.svg");
@@ -44,4 +50,14 @@ body {
 
 #scissors {
     background-image: url("./images/scissors.svg");
+}
+
+#roundResultsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#globalResultsContainer {
+    display: flex;
+    flex-direction: column;
 }
