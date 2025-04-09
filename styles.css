@@ -36,6 +36,7 @@ body {
     height: auto;
     width: 700px;
     aspect-ratio: 1 / 1;
+    gap: 20px;
 }
 
 #btnContainer {
@@ -62,10 +63,17 @@ body {
 #roundResultsContainer {
     display: flex;
     flex-direction: column;
+    align-self: normal;
+    gap: 10px;
 }
 
 .computerUserContainer {
-    
+    display: flex;
+    justify-content: space-between;
+}
+
+#winnerText {
+    align-self: center;
 }
 
 #globalResultsContainer {
