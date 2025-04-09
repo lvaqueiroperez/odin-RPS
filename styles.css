@@ -33,23 +33,30 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: auto;
+    width: 700px;
+    aspect-ratio: 1 / 1;
 }
 
 #btnContainer {
     display: flex;
+    gap: 10px;
 }
 
 #rock {
     background-image: url("./images/rock.svg");
+    padding: 100px;
 
 }
 
 #paper {
     background-image: url("./images/paper.svg");
+    padding: 100px;
 }
 
 #scissors {
     background-image: url("./images/scissors.svg");
+    padding: 100px;
 }
 
 #roundResultsContainer {
