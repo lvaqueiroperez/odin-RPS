@@ -30,3 +30,18 @@ body {
     border-left-color: blue;
     border-radius: 10px;
 }
+
+#btnContainer {}
+
+#rock {
+    background-image: url("./images/rock.svg");
+
+}
+
+#paper {
+    background-image: url("./images/paper.svg");
+}
+
+#scissors {
+    background-image: url("./images/scissors.svg");
+}
