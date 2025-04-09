@@ -1,3 +1,4 @@
+// para arreglar lo de darle muchas veces a un botón, desactivarlo una vez pulsado durante medio segundo
 let computerScore = 0;
 let userScore = 0;
 
@@ -12,6 +13,13 @@ btnDiv.addEventListener("click", (e) => {
     const btnId = e.target.id;
 
     if (btnId === "rock" || btnId === "paper" || btnId === "scissors") {
+
+        e.target.disabled = true;
+
+        setTimeout(() => {
+            e.target.disabled = false;
+        }, 500);
+
         computerResult.textContent = "Computer: ";
         userResult.textContent = "User: ";
         winnerText.textContent = "WINNER: ";
@@ -112,16 +120,14 @@ function playRound(computerSelection, humanSelection) {
 }
 
 function showWinner() {
-    setTimeout(() => {
-        if (userScore === 5) {
-            alert("YAY! YOU WIN!");
-            resetGame();
+    if (userScore === 5) {
+        alert("YAY! YOU WIN!");
+        resetGame();
 
-        } else if (computerScore === 5) {
-            alert("OH NO! YOU HAVE LOST!");
-            resetGame();
-        }
-    }, 1000);
+    } else if (computerScore === 5) {
+        alert("OH NO! YOU HAVE LOST!");
+        resetGame();
+    }
 }
 
 function resetGame() {
