@@ -114,7 +114,10 @@ function playRound(computerSelection, humanSelection) {
     userGlobalResult.textContent = "USER: " + userScore;
 
     if (computerScore === 5 || userScore === 5) {
-        showWinner();
+        setTimeout(() => {
+            showWinner();
+        }, 500);
+
     };
 
 }
