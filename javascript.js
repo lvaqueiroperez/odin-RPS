@@ -1,4 +1,3 @@
-// para arreglar lo de darle muchas veces a un botón, desactivarlo una vez pulsado durante medio segundo
 let computerScore = 0;
 let userScore = 0;
 
