@@ -64,7 +64,8 @@ body {
     display: flex;
     flex-direction: column;
     align-self: normal;
-    gap: 10px;
+    gap: 70px;
+    margin-bottom: 50px;
 }
 
 .computerUserContainer {
