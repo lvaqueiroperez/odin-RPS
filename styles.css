@@ -98,4 +98,14 @@ body {
 #globalResultsContainer {
     display: flex;
     flex-direction: column;
+    align-self: normal;
+}
+
+#scoreText {
+    text-align: center;
+}
+
+.scoresContainer {
+    display: flex;
+    justify-content: space-between;
 }
