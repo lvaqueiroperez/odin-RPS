@@ -72,6 +72,14 @@ body {
     justify-content: space-between;
 }
 
+.computerRoundResult {
+    
+}
+
+.userRoundResult {
+
+}
+
 #winnerText {
     align-self: center;
 }
