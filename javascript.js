@@ -135,9 +135,9 @@ function showWinner() {
 function resetGame() {
     computerScore = 0;
     userScore = 0;
-    computerResult.textContent = "Computer: ";
-    userResult.textContent = "User: ";
-    winnerText.textContent = "WINNER: ";
-    computerGlobalResult.textContent = "";
-    userGlobalResult.textContent = "";
+    computerResult.textContent = "...";
+    userResult.textContent = "...";
+    winnerText.textContent = "...";
+    computerGlobalResult.textContent = 0;
+    userGlobalResult.textContent = 0;
 }
