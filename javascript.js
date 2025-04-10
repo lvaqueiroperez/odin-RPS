@@ -55,55 +55,55 @@ function playRound(computerSelection, humanSelection) {
 
     if (computerSelection === humanSelection) {
 
-        computerResult.textContent += computerSelection;
-        userResult.textContent += humanSelection;
+        computerResult.textContent = computerSelection;
+        userResult.textContent = humanSelection;
         winnerText.textContent += "IT'S A TIE!";
 
 
     } else if (computerSelection === "scissors" && humanSelection === "paper") {
 
-        computerResult.textContent += computerSelection;
-        userResult.textContent += humanSelection;
+        computerResult.textContent = computerSelection;
+        userResult.textContent = humanSelection;
         winnerText.textContent += "YOU LOSE!";
 
         computerScore++;
     }
     else if (computerSelection === "scissors" && humanSelection === "rock") {
 
-        computerResult.textContent += computerSelection;
-        userResult.textContent += humanSelection;
+        computerResult.textContent = computerSelection;
+        userResult.textContent = humanSelection;
         winnerText.textContent += "YOU WIN!";
 
         userScore++;
     }
     else if (computerSelection === "paper" && humanSelection === "rock") {
 
-        computerResult.textContent += computerSelection;
-        userResult.textContent += humanSelection;
+        computerResult.textContent = computerSelection;
+        userResult.textContent = humanSelection;
         winnerText.textContent += "YOU LOSE!";
 
         computerScore++;
     }
     else if (computerSelection === "paper" && humanSelection === "scissors") {
 
-        computerResult.textContent += computerSelection;
-        userResult.textContent += humanSelection;
+        computerResult.textContent = computerSelection;
+        userResult.textContent = humanSelection;
         winnerText.textContent += "YOU WIN!";
 
         userScore++;
     }
     else if (computerSelection === "rock" && humanSelection === "paper") {
 
-        computerResult.textContent += computerSelection;
-        userResult.textContent += humanSelection;
+        computerResult.textContent = computerSelection;
+        userResult.textContent = humanSelection;
         winnerText.textContent += "YOU WIN!";
 
         userScore++;
     }
     else if (computerSelection === "rock" && humanSelection === "scissors") {
 
-        computerResult.textContent += computerSelection;
-        userResult.textContent += humanSelection;
+        computerResult.textContent = computerSelection;
+        userResult.textContent = humanSelection;
         winnerText.textContent += "YOU LOSE!";
 
         computerScore++;
