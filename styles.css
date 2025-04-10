@@ -110,3 +110,7 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
+.scoresContainer div {
+    font-size: 40px;
+}
