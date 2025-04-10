@@ -76,16 +76,15 @@ body {
 .computerRoundResult {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .userRoundResult {
     display: flex;
     flex-direction: column;
-}
-
-.computerRoundResult div,
-.userRoundResult div {
-    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 #winnerTitle {
