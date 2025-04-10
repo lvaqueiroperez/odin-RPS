@@ -57,14 +57,14 @@ function playRound(computerSelection, humanSelection) {
 
         computerResult.textContent = computerSelection;
         userResult.textContent = humanSelection;
-        winnerText.textContent += "IT'S A TIE!";
+        winnerText.textContent = "IT'S A TIE!";
 
 
     } else if (computerSelection === "scissors" && humanSelection === "paper") {
 
         computerResult.textContent = computerSelection;
         userResult.textContent = humanSelection;
-        winnerText.textContent += "YOU LOSE!";
+        winnerText.textContent = "YOU LOSE!";
 
         computerScore++;
     }
@@ -72,7 +72,7 @@ function playRound(computerSelection, humanSelection) {
 
         computerResult.textContent = computerSelection;
         userResult.textContent = humanSelection;
-        winnerText.textContent += "YOU WIN!";
+        winnerText.textContent = "YOU WIN!";
 
         userScore++;
     }
@@ -80,7 +80,7 @@ function playRound(computerSelection, humanSelection) {
 
         computerResult.textContent = computerSelection;
         userResult.textContent = humanSelection;
-        winnerText.textContent += "YOU LOSE!";
+        winnerText.textContent = "YOU LOSE!";
 
         computerScore++;
     }
@@ -88,7 +88,7 @@ function playRound(computerSelection, humanSelection) {
 
         computerResult.textContent = computerSelection;
         userResult.textContent = humanSelection;
-        winnerText.textContent += "YOU WIN!";
+        winnerText.textContent = "YOU WIN!";
 
         userScore++;
     }
@@ -96,7 +96,7 @@ function playRound(computerSelection, humanSelection) {
 
         computerResult.textContent = computerSelection;
         userResult.textContent = humanSelection;
-        winnerText.textContent += "YOU WIN!";
+        winnerText.textContent = "YOU WIN!";
 
         userScore++;
     }
@@ -104,7 +104,7 @@ function playRound(computerSelection, humanSelection) {
 
         computerResult.textContent = computerSelection;
         userResult.textContent = humanSelection;
-        winnerText.textContent += "YOU LOSE!";
+        winnerText.textContent = "YOU LOSE!";
 
         computerScore++;
     }

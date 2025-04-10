@@ -88,6 +88,10 @@ body {
     text-align: center;
 }
 
+#winnerTitle {
+    align-self: center;
+}
+
 #winnerText {
     align-self: center;
 }
