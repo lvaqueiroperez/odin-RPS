@@ -109,8 +109,8 @@ function playRound(computerSelection, humanSelection) {
         computerScore++;
     }
 
-    computerGlobalResult.textContent = "COMPUTER: " + computerScore;
-    userGlobalResult.textContent = "USER: " + userScore;
+    computerGlobalResult.textContent = computerScore;
+    userGlobalResult.textContent = userScore;
 
     if (computerScore === 5 || userScore === 5) {
         setTimeout(() => {
