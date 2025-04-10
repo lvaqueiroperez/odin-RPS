@@ -99,7 +99,7 @@ body {
     display: flex;
     flex-direction: column;
     align-self: normal;
-    gap: 115px;
+    gap: 15px;
 }
 
 #scoreText {
