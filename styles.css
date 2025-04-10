@@ -73,14 +73,7 @@ body {
     justify-content: space-between;
 }
 
-.computerRoundResult {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.userRoundResult {
+.roundResultContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
