@@ -73,11 +73,13 @@ body {
 }
 
 .computerRoundResult {
-    
+    display: flex;
+    flex-direction: column;
 }
 
 .userRoundResult {
-
+    display: flex;
+    flex-direction: column;
 }
 
 #winnerText {
